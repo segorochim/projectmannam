@@ -1,0 +1,89 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    font-family: "나눔손글씨 딸에게 엄마가";
+    background: linear-gradient(#141e30, #243b55);
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(#faebd7 ,#f5f5dc);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+}
+
+.login h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #243b55;
+    text-align: center;
+}
+
+.login .user_box {
+    position: relative;
+}
+
+.login .user_box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #243b55;
+    margin-bottom: 1px solid #243b55;
+    outline: none;
+    background: transparent;
+}
+
+.login .user_box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #243b55;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.login .user_box input:focus ~ label,
+.login .user_box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #d2b48c;
+    font-size: 15px;
+}
+
+.login form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #d2b48c;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 2s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+
+.login a:hover {
+    background: #d2b48c;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #d2b48c;
+}
+
+.login a span {
+    position: absolute;
+    display: block;
+}

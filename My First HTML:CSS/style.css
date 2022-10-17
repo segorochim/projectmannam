@@ -1,0 +1,59 @@
+:root {
+    --purple: #b4c3ff;
+    --purple-dark: #96a5ff;
+    --tape-gray: #dbd8be;
+    --tape-edge-gray: #b7b49d;
+    --transparent: rgba (255,255,255,0);
+}
+
+body {
+    background-image: url('https://pin.it/7iqN65y');
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#fixed {
+    position: top, center, fixed;
+    font-size: 25px; 
+}
+
+span {
+    position: absolute;
+    display: block;
+}
+
+.paper {
+    position: relative;
+    background: linear-gradient(
+        to bottom right,
+        var(--purple-dark),
+        20%,
+        var(--transparent),
+    )
+      var(--paper-color);
+
+    min-width: 250px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "나눔손글씨 딸에게 엄마가";
+    font-size: 2rem;
+    background-color: var(--purple);
+    box-shadow: var(--shadow-size) var(--shadow-size) 2px var(--paper-dark);
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .top-tape {
+    position: absolute;
+    height: 4vmin;
+    top: -5px;
+    width: 110%;
+    background-color: var(--tape-gray);
+    border-right: 1px dotted var(--tape-edge-gray);
+    border-left: 1px dotted var(--tape-edge-gray);
+    opacity: 0.5;
+  }

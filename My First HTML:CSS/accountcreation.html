@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width = device-width, intitial-scale = 1, user-scalable = yes">
+    
+    <title>Create an Account</title>
+
+    <link rel = "joinForm" href = "joinform.js"/>
+    <link rel = "homepage-verifyX" href = "home1.html"/>
+    <link rel = "homepage" href = "home2.(button).html"/>
+</head>
+    
+<body>
+    <style> * {text-decoration: none; font-family: "나눔손글씨 딸에게 엄마가";} </style>
+    <style> * {background-color: thistle;} </style>
+    
+    <h2><strong>어서오세요.</strong></h2>
+    <h3>간단한 절차를 통해 회원이 되세요!</h3>
+    <h5>이메일 주소는 메일링 서비스를 위한 것으로, 필수 기입 사항은 아닙니다:)</h5>
+
+    <form> 
+        <div class = "input-Email">
+            <!--이메일 아이디 부분 입력-->
+            <label for = "Email_id" placeholder = Email>이메일 주소</label>
+                <input type = "text" id = "Email_id" placeholder = "">
+
+            @
+
+            <!--이메일 도메인 주소 부분 직접 입력-->
+            <input type = "text" class = "box" id = "select_domain" placeholder = "직접 입력" onkeydown = "inputEmailChk()"/>
+
+            <!--이메일 도메인 주소 부분 선택 입력-->     
+            <select class= "box" id ="domain_list">
+                <option value="karts.ac.kr">karts.ac.kr</option>
+                <option value="gmail.com">gmail.com</option>
+                <option value="naver.com">naver.com</option>
+
+                <script>
+                    const domainListEl = document.querySelector('#select_domain')
+                    const domainInputEl = document.querySelector('#domain_list')
+                    domainListEl.addEventListener('change', (event) => {
+                    if (event.target.value !== "type") {
+                        domainInputEl.value = event.target.value
+                        domainInputEl.disabled = true
+                    } else {
+                        domainInputEl.value = ""
+                        domainInputEl.disabled = false
+                    }})
+                </script>
+            </select>
+
+        <!--이메일 주소 중복확인-->        
+        <button type = "submit" onclick = "fn_dbCheckEmail()" name =  "dbCheckEmail" class = "checkEmail">중복확인</button> 
+        </div>
+
+        <label><input type="checkbox" id = "checkbox" value="개인정보수집동의"><strong>개인정보 수집 및 이용에 동의합니다.</strong></label>
+        <p>개인정보 수집 관련 자세한 사항을 확인하려면 <a href = 개인정보어쩌구.html>여기</a>를 클릭하세요.</p> 
+
+        <fieldset>
+            <div>
+                <label for = "nickname">아이디 및 닉네임</label>
+                <input id = "nickname" required_placeholder = "nickname" minlength="2" type="id" onkeydown = "inputIdChk()"/>
+                <button type ="submit" onclick = "fn_dbCheckId()" name = "dbCheckId" class = "checkId">중복확인</button>
+            </div>
+
+            <div>
+                <label for = "password">비밀번호</label>
+                <input id = "password" required_placeholder = "password" minlength = "10" type = "password" onkeydown = "inputPasswordChk()"/>
+                <p>아이디, 비밀번호 수정은 <a href = 개발자문의.html>개발자에게 문의</a> 바랍니다.</p>
+            </div>
+        </fieldset>
+
+    <div>
+        <button type = "submit" <a href = "loginsuccess.html">계정 생성</a></button>
+    </div>
+
+    <div>        
+        <button onclick = location.href = "home1.html" target = "_self">홈으로 돌아가기</button> 
+    </div>
+            
+    </form>
+
+</body>
+</html>

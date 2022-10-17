@@ -1,0 +1,30 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    font-family: "나눔손글씨 딸에게 엄마가";
+    background: linear-gradient(#141e30, #243b55);
+}
+
+.loginsuccess {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(#faebd7 ,#f5f5dc);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+}
+
+.loginsuccess h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #243b55;
+    text-align: center;
+}
